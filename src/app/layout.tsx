@@ -4,7 +4,7 @@ import './globals.css';
 import { ThemeProvider } from './Providers/ThemeProvider';
 import Layout from './(pages)/Layout';
 import Template from './template';
-import ThemeDropdown from '@/components/ThemeDropdown/ThemeDropdown';
+import { Toaster } from 'sonner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +21,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
+        <Toaster
+          position='top-center'
+          richColors
+        />
         <ThemeProvider
           attribute='class'
           defaultTheme='dark'

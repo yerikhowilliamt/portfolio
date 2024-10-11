@@ -19,11 +19,13 @@ import IconScroller from '@/components/Elements/Animation/IconScroller';
 import AboutData from '@/data/AboutData';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { toast } from 'sonner';
 
 const ContactPage = () => {
   const [index] = useState(0);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
   const form = useForm();
   const formContact = useRef(null);
@@ -34,6 +36,7 @@ const ContactPage = () => {
   const handleSubmit = async (data: FieldValues) => {
     setError(false);
     setSuccess(false);
+    setIsLoading(true)
 
     try {
       await emailjs.sendForm(
@@ -45,10 +48,14 @@ const ContactPage = () => {
         }
       );
       setSuccess(true);
+      toast.success('Success send email');
       form.reset();
     } catch (error) {
       setError(true);
+      toast.error('Failed send email');
       console.error('Email sending error:', error);
+    } finally {
+      setIsLoading(false)
     }
   };
 
@@ -158,7 +165,9 @@ const ContactPage = () => {
                     </FormItem>
                   )}
                 />
-                <Button type='submit'>Send</Button>
+                <Button disabled={isLoading} type='submit'>
+                  {isLoading ? 'Loading...' : 'Send'}
+                </Button>
               </div>
             </div>
           </form>
