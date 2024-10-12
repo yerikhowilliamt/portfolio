@@ -97,9 +97,9 @@ const WorkSlider = () => {
                   width={image.width}
                   height={image.height}
                   alt={image.alt}
-                  className='rounded-md absolute w-full h-full object-cover'
+                  className='rounded-md absolute w-full h-full object-cover -z-10 '
                 />
-                <div className='relative w-full h-[280px] transform transition-all ease-in-out duration-500 opacity-0 hover:opacity-100 z-10 flex flex-col justify-center items-center'>
+                <div className='relative w-full h-[280px] transform transition-all ease-in-out duration-500 opacity-0 hover:opacity-100 flex flex-col justify-center items-center'>
                   <Image
                     src={image.src}
                     width={image.width}

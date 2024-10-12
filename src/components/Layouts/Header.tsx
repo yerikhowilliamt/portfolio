@@ -5,7 +5,7 @@ import Logo from '../Elements/Logo/Logo';
 
 const Header = () => {
   return (
-    <header className='fixed w-full px-5 md:px-10 flex justify-between items-center'>
+    <header className='w-full px-5 md:px-10 flex justify-between items-center'>
       <Logo />
       <Navbar />
       <div className='flex gap-4 md:gap-10'>
