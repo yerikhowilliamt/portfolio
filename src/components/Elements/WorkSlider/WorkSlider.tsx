@@ -96,7 +96,7 @@ const workData = {
           title: 'CONTACT MANAGEMENT API',
           description: 'API for contact management with NestJS, Prisma orm, and PostgreSQL for database',
           projectHref: 'https://github.com/yerikhowilliamt/restful-api-contact-app',
-          repoHref: 'htthttps://github.com/yerikhowilliamt/restful-api-contact-app',
+          repoHref: 'https://github.com/yerikhowilliamt/restful-api-contact-app',
           tech: [
             <SiNestjs  key='nestjs' />,
             <SiPrisma key='prisma' />,
