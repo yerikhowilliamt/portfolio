@@ -22,7 +22,7 @@ const IconScroller: React.FC<IconScrollerProps> = ({
       initial={initial}
       animate={animate}
       transition={{
-        duration: 15,
+        duration: 30,
         repeat: Infinity,
         ease: 'linear',
       }}
