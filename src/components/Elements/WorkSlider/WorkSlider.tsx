@@ -79,7 +79,7 @@ const workData = {
           height: 500,
           alt: 'work image',
           title: 'VIDEO BELAJAR RESTful API',
-          description: 'RESTful API for videobelajar online education course with express, nodemailer, jwt token, prisma orm, and MySQL for database',
+          description: 'RESTful API for videobelajar with express, nodemailer, jwt token, prisma orm, and MySQL for database',
           projectHref: 'https://github.com/yerikhowilliamt/mission-advanced-backend-2-A',
           repoHref: 'https://github.com/yerikhowilliamt/mission-advanced-backend-2-A',
           tech: [
@@ -195,27 +195,29 @@ const WorkSlider = () => {
                     alt={image.alt}
                     className='absolute top-0 w-full h-full rounded-lg object-fill -z-10  brightness-[15%]'
                   />
-                  <div className='flex flex-col gap-2 md:gap-10 w-full'>
-                    <div className='flex flex-col justify-center items-center px-0 md:px-10 text-center gap-y-4'>
+                  <div className='flex flex-col justify-between h-full p-5 w-full'>
+                    <div className='flex flex-col justify-center items-center px-0 md:px-10 text-center'>
                       <h3 className='text-lg md:text-2xl font-head font-bold text-cyan-500'>
                         {image.title}
                       </h3>
-                      <p className='text-xs md:text-sm text-white text-center'>
+                    </div>
+                    <div className='w-full flex flex-col justify-center items-center gap-4'>
+                    <p className='text-xs md:text-sm text-white text-center'>
                         {image.description}
                       </p>
-                      <span className='flex gap-4'>{image.tech}</span>
+                      <span className='flex gap-4 text-white'>{image.tech}</span>
                     </div>
-                    <div className='flex flex-col md:flex-row-reverse justify-center items-center gap-x-4 gap-y-2 w-full px-5'>
+                    <div className='flex flex-col md:flex-row-reverse justify-center items-center gap-x-4 gap-y-2 w-full'>
                       <Button
                         onClick={() => handleProjectClick(image.projectHref)}
-                        className='w-full gap-2 text-sm md:text-base bg-white'
+                        className='w-full gap-2 text-sm md:text-base bg-white text-black hover:text-cyan-500'
                       >
                         Go to project
                         <ChevronsRight />
                       </Button>
                       <Button
                         onClick={() => handleRepoClick(image.repoHref)}
-                        className='w-full gap-2 text-sm md:text-base bg-white'
+                        className='w-full gap-2 text-sm md:text-base bg-white text-black hover:text-cyan-500'
                       >
                         Go to repository
                         <FaGithub />
