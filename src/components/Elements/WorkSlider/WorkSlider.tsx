@@ -79,15 +79,18 @@ const workData = {
           height: 500,
           alt: 'work image',
           title: 'VIDEO BELAJAR RESTful API',
-          description: 'RESTful API for videobelajar with express, nodemailer, jwt token, prisma orm, and MySQL for database',
-          projectHref: 'https://github.com/yerikhowilliamt/mission-advanced-backend-2-A',
-          repoHref: 'https://github.com/yerikhowilliamt/mission-advanced-backend-2-A',
+          description:
+            'RESTful API for videobelajar with express, nodemailer, jwt token, prisma orm, and MySQL for database',
+          projectHref:
+            'https://github.com/yerikhowilliamt/mission-advanced-backend-2-A',
+          repoHref:
+            'https://github.com/yerikhowilliamt/mission-advanced-backend-2-A',
           tech: [
             <SiExpress key='express' />,
             <SiJsonwebtokens key='JWT' />,
             <SiPrisma key='prisma' />,
             <FaNode key='node.js' />,
-            <SiMysql  key='mysql' />,
+            <SiMysql key='mysql' />,
           ],
         },
         {
@@ -96,11 +99,14 @@ const workData = {
           height: 500,
           alt: 'work image',
           title: 'CONTACT MANAGEMENT RESTful API',
-          description: 'RESTful API for contact management with NestJS, Prisma orm, and PostgreSQL for database',
-          projectHref: 'https://github.com/yerikhowilliamt/restful-api-contact-app',
-          repoHref: 'https://github.com/yerikhowilliamt/restful-api-contact-app',
+          description:
+            'RESTful API for contact management with NestJS, Prisma orm, and PostgreSQL for database',
+          projectHref:
+            'https://github.com/yerikhowilliamt/restful-api-contact-app',
+          repoHref:
+            'https://github.com/yerikhowilliamt/restful-api-contact-app',
           tech: [
-            <SiNestjs  key='nestjs' />,
+            <SiNestjs key='nestjs' />,
             <SiPrisma key='prisma' />,
             <FaNode key='node.js' />,
             <BiLogoPostgresql key='postgresql' />,
@@ -120,7 +126,8 @@ const workData = {
           title: 'Yellow Taxi Dashboard',
           description: `This is the frontend of the Yellow Taxi Trip project, built using Next.js, along with various libraries to enhance the application's UI/UX and functionality.`,
           projectHref: 'https://yellow-taxi-trips.vercel.app',
-          repoHref: 'https://github.com/yerikhowilliamt/yellow-taxi-trip-frontend',
+          repoHref:
+            'https://github.com/yerikhowilliamt/yellow-taxi-trip-frontend',
           tech: [
             <SiNextdotjs key='next' />,
             <SiAxios key='axios' />,
@@ -135,11 +142,14 @@ const workData = {
           height: 500,
           alt: 'work image',
           title: 'Yellow Taxi Dashboard RESTful API',
-          description: 'RESTful API for yellow taxi dashboard with NestJS, and PostgreSQL for database with Postgis for the extension',
-          projectHref: 'https://yellow-taxi-trips.up.railway.app/api/yellow-taxi-trips?page=1&limit=10',
-          repoHref: 'https://github.com/yerikhowilliamt/yellow-taxi-trip-backend',
+          description:
+            'RESTful API for yellow taxi dashboard with NestJS, and PostgreSQL for database with Postgis for the extension',
+          projectHref:
+            'https://yellow-taxi-trips.up.railway.app/api/yellow-taxi-trips?page=1&limit=10',
+          repoHref:
+            'https://github.com/yerikhowilliamt/yellow-taxi-trip-backend',
           tech: [
-            <SiNestjs  key='nestjs' />,
+            <SiNestjs key='nestjs' />,
             <FaNode key='node.js' />,
             <SiAxios key='axios' />,
             <BiLogoPostgresql key='postgresql' />,
@@ -195,17 +205,19 @@ const WorkSlider = () => {
                     alt={image.alt}
                     className='absolute top-0 w-full h-full rounded-lg object-fill -z-10  brightness-[15%]'
                   />
-                  <div className='flex flex-col justify-between h-full p-5 w-full'>
+                  <div className='flex flex-col justify-between h-full px-5 py-2 w-full'>
                     <div className='flex flex-col justify-center items-center px-0 md:px-10 text-center'>
                       <h3 className='text-lg md:text-2xl font-head font-bold text-cyan-500'>
                         {image.title}
                       </h3>
                     </div>
-                    <div className='w-full flex flex-col justify-center items-center gap-4'>
-                    <p className='text-xs md:text-sm text-white text-center'>
+                    <div className='w-full flex flex-col justify-center items-center gap-2 md:gap-4'>
+                      <p className='text-xs md:text-sm text-white text-center'>
                         {image.description}
                       </p>
-                      <span className='flex gap-4 text-white'>{image.tech}</span>
+                      <span className='flex gap-4 text-white'>
+                        {image.tech}
+                      </span>
                     </div>
                     <div className='flex flex-col md:flex-row-reverse justify-center items-center gap-x-4 gap-y-2 w-full'>
                       <Button
