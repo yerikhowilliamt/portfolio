@@ -8,7 +8,7 @@ const ProjectPage = () => {
   return (
     <Main>
       <div className='container mx-auto'>
-        <div className='flex flex-col xl:flex-row gap-x-8 justify-center items-center'>
+        <div className='w-full flex flex-col xl:flex-row gap-x-8 justify-center items-center'>
           {/* text */}
           <motion.div
             initial={{ y: -40, opacity: 0 }}
